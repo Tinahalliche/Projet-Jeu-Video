@@ -1,0 +1,51 @@
+```plantuml 
+@startuml
+    participant Player
+    participant Game
+    participant Platform
+
+    Player->>Game1: Lance le jeu
+    Game1->>Game1: Initialize()
+    Game1->>Platform: Création des plateformes
+
+    Note over Game1: État: EnteringName
+    Player->>Game1: Saisit nom
+    Game1->>Game1: AskForPlayerName()
+
+    Note over Game1: État: Playing
+    loop Pendant le jeu
+        Player->>Game1: Déplacement (touches)
+        Game1->>Platform: IsCellIntact()
+        Platform-->>Game1: État cellule
+        
+        alt Cellule intacte
+            Game1->>Platform: GetScoreAtCell()
+            Platform-->>Game1: Score cellule
+            alt Score présent
+                Game1->>Platform: CollectScore()
+                Platform-->>Game1: Mise à jour score
+            end
+        else Cellule effondrée
+            Game1->>Game1: État: Transition
+            
+            alt Première plateforme
+                Game1->>Game1: LoadSecondPlatform()
+                Game1->>Platform: Création nouvelle plateforme
+                Game1->>Game1: État: Playing
+            else Seconde plateforme
+                Game1->>Game1: État: TransitionToGameOver
+                Game1->>Game1: État: GameOver
+            end
+        end
+
+        Game1->>Platform: CollapseRandomCells()
+    end
+
+    Note over Game1: État: GameOver
+    Player->>Game1: Appuie sur 'R'
+    Game1->>Game1: RestartGame()
+    Game1->>Platform: Réinitialisation plateformes
+   
+    @enduml
+    ```
+    
