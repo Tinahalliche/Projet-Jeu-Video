@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GameContent>
+  <Textures>
+    <Texture Name="Cell" Path="Cell" />
+    <Texture Name="Cell2" Path="Cell2" />
+    <Texture Name="Player" Path="Player" />
+  </Textures>
+  <Fonts>
+    <Font Name="DefaultFont" Path="DefaultFont" />
+  </Fonts>
+  <Sounds>
+    <Sound Name="DeathSound" Path="death" />
+    <Sound Name="RoundEndSound" Path="round_end" />
+  </Sounds>
+  <GameSettings>
+    <GridWidth>10</GridWidth>
+    <GridHeight>6</GridHeight>
+    <CellSize>80</CellSize>
+  </GameSettings>
+  <Platforms>
+    <Platform Name="Platform1" Texture="Cell" />
+    <Platform Name="Platform2" Texture="Cell2" />
+  </Platforms>
+  <Player>
+    <Name> TINA</Name>
+    <scores>
+      <Score>-100</Score>
+      <Score>400</Score>
+      <Score>-600</Score>
+      <Score>-50</Score>
+      <Score>1000</Score>
+      <Score>950</Score>
+      <Score>150</Score>
+      <Score>602</Score>
+      <Score>1802</Score>
+      <Score>-400</Score>
+      <Score>-196</Score>
+      <Score>502</Score>
+      <Score>102</Score>
+      <Score>1400</Score>
+      <Score>4</Score>
+    </scores>
+    <InitialPosition X="7" Y="2" />
+  </Player>
+  <Player>
+    <Name> BINO</Name>
+    <scores>
+      <Score>600</Score>
+      <Score>-100</Score>
+      <Score>400</Score>
+      <Score>300</Score>
+      <Score>1000</Score>
+      <Score>1602</Score>
+      <Score>0</Score>
+      <Score>-50</Score>
+    </scores>
+    <InitialPosition X="5" Y="5" />
+  </Player>
+  <Player>
+    <Name> LYDIA</Name>
+    <scores>
+      <Score>2</Score>
+      <Score>-200</Score>
+      <Score>450</Score>
+      <Score>100</Score>
+      <Score>52</Score>
+      <Score>102</Score>
+      <Score>-200</Score>
+    </scores>
+    <InitialPosition X="5" Y="3" />
+  </Player>
+  <Player>
+    <Name> SONIA</Name>
+    <scores>
+      <Score>700</Score>
+      <Score>102</Score>
+      <Score>4</Score>
+      <Score>-48</Score>
+      <Score>400</Score>
+      <Score>3102</Score>
+      <Score>1000</Score>
+      <Score>-600</Score>
+      <Score>1702</Score>
+    </scores>
+    <InitialPosition X="1" Y="5" />
+  </Player>
+  <Player>
+    <Name> TOTO</Name>
+    <scores>
+      <Score>700</Score>
+      <Score>100</Score>
+      <Score>452</Score>
+      <Score>502</Score>
+    </scores>
+    <InitialPosition X="2" Y="5" />
+  </Player>
+  <Player>
+    <Name> DINO</Name>
+    <scores>
+      <Score>1650</Score>
+      <Score>2204</Score>
+      <Score>2612</Score>
+    </scores>
+    <InitialPosition X="2" Y="4" />
+  </Player>
+  <Player>
+    <Name> ZAY</Name>
+    <scores>
+      <Score>2904</Score>
+    </scores>
+    <InitialPosition X="1" Y="0" />
+  </Player>
+</GameContent>

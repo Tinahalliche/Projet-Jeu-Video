@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:element name="GameContent">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Textures">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Texture" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="Name" type="xs:string" use="required"/>
+									<xs:attribute name="Path" type="xs:string" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Fonts">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Font" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="Name" type="xs:string" use="required"/>
+									<xs:attribute name="Path" type="xs:string" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Sounds">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Sound" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="Name" type="xs:string" use="required"/>
+									<xs:attribute name="Path" type="xs:string" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="GameSettings">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="GridWidth" type="xs:int"/>
+							<xs:element name="GridHeight" type="xs:int"/>
+							<xs:element name="CellSize" type="xs:int"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Platforms">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Platform" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="Name" type="xs:string" use="required"/>
+									<xs:attribute name="Texture" type="xs:string" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Player" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Name" type="xs:string"/>
+							<xs:element name="scores">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Score" type="xs:int" maxOccurs="unbounded"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Texture" type="xs:string"/>
+							<xs:element name="InitialPosition">
+								<xs:complexType>
+									<xs:attribute name="X" type="xs:int" use="required"/>
+									<xs:attribute name="Y" type="xs:int" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

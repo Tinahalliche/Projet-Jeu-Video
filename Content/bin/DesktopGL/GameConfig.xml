@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameContent>
+	<Textures>
+		<Texture Name="Cell" Path="Cell" />
+		<Texture Name="Cell2" Path="Cell2" />
+		<Texture Name="Player" Path="Player" />
+	</Textures>
+	<Fonts>
+		<Font Name="DefaultFont" Path="DefaultFont" />
+	</Fonts>
+	<Sounds>
+		<Sound Name="DeathSound" Path="death" />
+		<Sound Name="RoundEndSound" Path="round_end" />
+	</Sounds>
+	<GameSettings>
+		<GridWidth>10</GridWidth>
+		<GridHeight>6</GridHeight>
+		<CellSize>80</CellSize>
+	</GameSettings>
+	<Platforms>
+		<Platform Name="Platform1" Texture="Cell" />
+		<Platform Name="Platform2" Texture="Cell2" />
+	</Platforms>
+	<Player>
+		<Name>PLAYERNAME</Name>
+		<scores>
+			<Score>0</Score>
+		</scores>
+		<Texture>Player</Texture>
+		<InitialPosition X="5" Y="5" />
+	</Player>
+</GameContent>
