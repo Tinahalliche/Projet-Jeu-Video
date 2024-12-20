@@ -1,0 +1,70 @@
+```plantuml
+@startuml
+class Game1 {
+-GraphicsDeviceManager _graphics
+-SpriteBatch spriteBatch
+-GameState gameState
+-Platform platform1
+-Platform platform2
+-Player player
+-string name
++Initialize()
++LoadContent()
++Update(GameTime)
++Draw(GameTime)
+-HandlePlayingState(GameTime, KeyboardState)
+-HandleTransitionState(GameTime)
+-SaveGameContent()
+}
+
+class Platform {
++Texture2D CellTexture
++int CellSize
+-int GridWidth
+-int GridHeight
++List~Vector2~ Cells
++Dictionary~Vector2, int~ CellScores
++Platform(gridWidth, gridHeight, cellSize, texture)
++Draw(SpriteBatch, SpriteFont)
++IsCellIntact(row, col)
++CollapseRandomCells(Random, int)
++GetScoreAtCell(Vector2)
++CollectScore(Vector2)
+}
+
+class Player {
++Vector2 Position
++Texture2D Texture
++int CellSize
++bool IsVisible
++PlayerState State
++int Score
++string name
++Player(Name, position, texture, cellSize)
++Move(KeyboardState, GameTime, gridWidth, gridHeight, Platform)
++Draw(SpriteBatch)
++Update(GameTime)
+}
+
+class GameState {
+<<enumeration>>
+EnteringName
+Playing
+Transition
+TransitionToGameOver
+GameOver
+}
+
+class PlayerState {
+<<enumeration>>
+Active
+Invisible
+Dead
+}
+
+Game1 --> Platform : contains
+Game1 --> Player : contains
+Game1 --> GameState : uses
+Player --> PlayerState : uses
+@enduml
+```
